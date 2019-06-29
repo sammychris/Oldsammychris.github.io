@@ -261,7 +261,7 @@ li.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #25b2ba;
+  color: #e4e4e4;
 }
 
 .App #projects main .each-project .project-info h1 .dates {

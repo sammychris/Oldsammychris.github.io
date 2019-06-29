@@ -1,18 +1,20 @@
 import React from 'react';
 
 const stacks = (stac) => {
-	return {
-		'react': { name: 'ReactJs', background: '#218e94' },
-		'html5': { name: 'HTML5', background: '#ca2b03' },
-		'javascript': { name: 'JavaScript', background: '#cea11a' },
-		'd3': { name: 'D3', background: '#f5824c' },
-		'jquery': { name: 'jQuery', background: '#172c45' },
-		'sass': { name: 'Sass', background: '#b55f8c' },
-		'express': { name: 'Expressjs', background: '#888585' },
-		'mongodb': { name: 'MongoDB', background: '#4aad3a' },
-		'boostrap': { name: 'Bootstrap', background: '#5f3f88' },
-		'css3': { name: 'CSS3', background: '#379ad6' }
+	console.log(stac)
+	let colors = {
+		react: { name: 'ReactJs', background: '#218e94' },
+		html5: { name: 'HTML5', background: '#ca2b03' },
+		javascript: { name: 'JavaScript', background: '#cea11a' },
+		d3: { name: 'D3', background: '#f5824c' },
+		jquery: { name: 'jQuery', background: '#172c45' },
+		sass: { name: 'Sass', background: '#b55f8c' },
+		express: { name: 'Expressjs', background: '#888585' },
+		mongodb: { name: 'MongoDB', background: '#4aad3a' },
+		boostrap: { name: 'Bootstrap', background: '#5f3f88' },
+		css3: { name: 'CSS3', background: '#379ad6' }
 	}[stac];
+	return colors? colors: { name: stac, background: '#284748' };
 }
 
 const EachProject = (props) => {
@@ -24,7 +26,8 @@ const EachProject = (props) => {
 	if(descripArr) {
 		Descript = descripArr.split('.').map( a => <p>{a}.</p>);
 		dateStr = new Date(props.project.create_on).toDateString();
-		Skills = props.project.skills.map((a, i) => <span style={{background: '#ca2b03', top: i * 30}}>{a}</span>)
+
+		Skills = props.project.skills.map((a, i) => <span style={{background: stacks(a).background, top: i * 30}}>{stacks(a).name}</span>)
 	}
 	return (
 		<div className="contents" style={{ backgroundColor:props.backgr }}>
