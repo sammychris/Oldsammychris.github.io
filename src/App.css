@@ -20,7 +20,7 @@ h1 {
 /* Profile Section Starts Here*/
 .App #profile {
   text-align: center;
-  width: 269px;
+  width: 300px;
   height: 100vh;
   position: fixed;
   background: #323435;
@@ -29,7 +29,7 @@ h1 {
 }
 
 .App #profile #minimize {
-  padding: 30px 20px;
+  padding: 40px 20px;
 }
 
 .App #profile #minimize header h1 {
@@ -39,20 +39,39 @@ h1 {
 
 
 .App #profile #minimize main #profilePic {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.App #profile main img {
+.App #profile main #profilePic img {
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
 }
 
-.App #profile main p {
+.App #profile main #about p {
   color: #e4e3e3;
   line-height: 25px;
   font-size: 14px
+}
+
+.App #profile main #skills {
+  text-align: left;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.App #profile main #skills h3 {
+  font-weight: lighter;
+  margin: 7px;
+}
+
+.App #profile main #skills #skill span {
+  padding: 2px 5px;
+  margin: 5px;
+  border-radius: 2px;
+  display: inline-flex;
 }
 
 .App #profile footer {
@@ -86,7 +105,7 @@ h1 {
 .App #projects {
   background: #1d1d1d;
   position: absolute;
-  left: 269px;
+  left: 300px;
   right: 0;
   color: #ececec;
 }
@@ -206,7 +225,17 @@ li.active {
 
 
 .App #projects main .each-project .project-img {
+  position: relative;
   width: 50%;
+}
+
+.App #projects main .each-project .project-img span {
+  position: absolute;
+  padding: 2px 5px;
+  margin: 0 0 5px 0;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 3px 1px 6px black;
+  left: -10px;
 }
 
 .App #projects main .each-project .project-img img {
