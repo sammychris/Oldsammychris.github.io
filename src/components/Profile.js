@@ -13,9 +13,9 @@ const Profile = () => {
 						<img src="https://avatars0.githubusercontent.com/u/29807328?s=400&u=4e49f08616b02550468c8939aa644982f0052732&v=4" alt=""/>
 					</div>
 					<div id="about">
-						<p>I'm a web developer living in Zagreb. 
-						I code every day with music pumping in my headphones.</p>
-						<p>Right now I'm immersed in JavaScript and React.</p>
+						<p>A web developer who lives in Lagos, Nigeria. 
+						I code every day and I'm always looking for an opportunity to design aswell.</p>
+						<p>Right now I'm immersed in MERN Stack and also love learning new things.</p>
 					</div>
 					<div id="skills">
 						<h3>My Skills:</h3>
@@ -35,11 +35,11 @@ const Profile = () => {
 					</div>
 				</main>
 				<footer>
-					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
+					<a href="mailto:ebusameric@gmail.com" className="icons">
 						<i className="fa fa-envelope-square"></i>
 						<span>Email</span>
 					</a> 
-					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/sammychris" className="icons">
 						<i className="fa fa-github"></i>
 						<span>Github</span>
 					</a>
@@ -47,10 +47,12 @@ const Profile = () => {
 						<i className="fa fa-twitter"></i>
 						<span>Twitter</span>
 					</a>
+				{    // eslint-disable-next-line 
 					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
 						<i className="fa fa-linkedin"></i>
 						<span>LinkedIn</span>
 					</a>
+				}
 				</footer>
 			</div>
 		</div>

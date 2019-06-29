@@ -32,10 +32,10 @@ const EachProject = (props) => {
 	return (
 		<div className="contents" style={{ backgroundColor:props.backgr }}>
 			<div className="each-project">
-				<div className="project-img">
+				<a target="_blank" rel="noopener noreferrer" href={props.project.demo_url} className="project-img">
 					{ Skills }
 					<img src={props.project.img_url} alt="" />
-				</div>
+				</a>
 				<div className="project-info">
 					<h1><span>{props.project.name}</span><span className="dates">{dateStr}</span></h1>
 					<div className="text-btn">
@@ -58,11 +58,11 @@ const Projects = (props) => {
 		<div id='projects'>
 			<header>
 				<div className='contacts'>
-					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
+					<a href="mailto:ebusameric@gmail.com" className="icons">
 						<i className="fa fa-envelope-square"></i>
 						<span>Email</span>
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/sammychris" className="icons">
 						<i className="fa fa-github"></i>
 						<span>Github</span>
 					</a>
@@ -70,10 +70,12 @@ const Projects = (props) => {
 						<i className="fa fa-twitter"></i>
 						<span>Twitter</span>
 					</a>
+				{ 	// eslint-disable-next-line
 					<a target="_blank" rel="noopener noreferrer" href="#" className="icons">
 						<i className="fa fa-linkedin"></i>
 						<span>LinkedIn</span>
 					</a>
+				}
 				</div>
 			</header>
 			<main>
@@ -90,8 +92,8 @@ const Projects = (props) => {
 				</div>
 				<div id="all-project" className="first">
 						{	props.project.map((ele, i) => {
-								if(i % 2 === 0)return <EachProject project={ele} backgr={'rgb(43, 43, 43)'} />;
-								return <EachProject project={ ele } index={i}/> 
+								if(i % 2 === 0)return <EachProject project={ele} backgr={'rgb(43, 43, 43)'} key={i} />;
+								return <EachProject project={ ele } index={i} key={i} /> 
 							}) 
 						}
 				</div>
