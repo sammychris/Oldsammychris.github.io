@@ -1,9 +1,8 @@
 import React from 'react';
 
 const stacks = (stac) => {
-	console.log(stac)
 	let colors = {
-		react: { name: 'ReactJs', background: '#218e94' },
+		react: { name: 'React', background: '#218e94' },
 		html5: { name: 'HTML5', background: '#ca2b03' },
 		javascript: { name: 'JavaScript', background: '#cea11a' },
 		d3: { name: 'D3', background: '#f5824c' },
@@ -55,7 +54,7 @@ const EachProject = (props) => {
 
 const Projects = (props) => {
 	return (
-		<div id='projects'>
+		<div id='projects' ref={props.scroll}>
 			<header>
 				<div className='contacts'>
 					<a href="mailto:ebusameric@gmail.com" className="icons">

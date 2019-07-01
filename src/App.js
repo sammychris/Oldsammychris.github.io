@@ -5,6 +5,7 @@ import Profile  from './components/Profile';
 import Projects from './components/Projects';
 
 class App extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,18 +15,23 @@ class App extends React.Component {
     }
 
     this.controlTag = this.controlTag.bind(this);
+    this.childDiv = React.createRef();
   }
+
   componentDidMount() {
     fetch('https://sammy-portfolio-api.glitch.me/api/project')
       .then(res => res.json())
       .then(res => {
-        console.log(res.project)
         this.setState({
           store: res.project,
           project: res.project
         })
       });
+    setTimeout(() => {
+      this.childDiv.current.scrollIntoView({ behavior: 'smooth' });
+    }, 500);
   }
+
   controlTag(e){
     let prevTag = document.getElementsByClassName('active')[0];
     let main = document.getElementById('all-project');
@@ -40,6 +46,7 @@ class App extends React.Component {
       project: P
     })
   }
+
   render() {
     return (
     <div className="App">
@@ -48,10 +55,12 @@ class App extends React.Component {
           project={this.state.project}
           tag={this.state.activeTag}
           control={this.controlTag}
+          scroll={this.childDiv}
          />
       </div>
     );
   }
+
 }
 
 export default App;
