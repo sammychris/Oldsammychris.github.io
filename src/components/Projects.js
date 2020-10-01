@@ -1,6 +1,6 @@
 import React from 'react';
 
-const stacks = (stac) => {
+const stacks = (stack) => {
 	let colors = {
 		react: { name: 'React', background: '#218e94' },
 		html5: { name: 'HTML5', background: '#ca2b03' },
@@ -12,8 +12,8 @@ const stacks = (stac) => {
 		mongodb: { name: 'MongoDB', background: '#4aad3a' },
 		boostrap: { name: 'Bootstrap', background: '#5f3f88' },
 		css3: { name: 'CSS3', background: '#379ad6' }
-	}[stac];
-	return colors? colors: { name: stac, background: '#284748' };
+	}[stack];
+	return colors? colors: { name: stack, background: '#284748' };
 }
 
 const EachProject = (props) => {
